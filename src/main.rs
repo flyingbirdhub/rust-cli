@@ -1,16 +1,12 @@
 use console::style;
-use run_script::ScriptOptions;
+
+mod user;
+use user::user_info::UserInfo;
 
 fn main() {
     println!("This is {} neat", style("quite").cyan());
 
-    let options = ScriptOptions::new();
+    let user_info = UserInfo::new().unwrap();
 
-    let args = vec![];
-
-    let (code, output, error) = run_script::run("whoami", &args, &options);
-
-    print!("Exit Code: {}", code);
-    print!("Ouput: {}", output);
-    print!("Error: {}", error);
+    print!("UserInfo: {:#?}", user_info);
 }
