@@ -8,3 +8,20 @@ edition = "2021"
 [dependencies]
 console = "0.15.0"
 run_script = "0.9.0"
+# for parse args
+structopt = "0.3.26"
+
+# for color output
+ansi_term = "0.12.1"
+
+# for indicating progress
+indicatif = "0.16.2"
+
+# for log
+log = "0.4.17"
+
+# for args log
+clap-verbosity-flag = "1.0.0"
+
+# signal handler
+ctrlc = "3.2.2"

@@ -12,6 +12,6 @@ impl UserInfo {
         if code == 0 {
             return Ok(UserInfo { name, email: String::from("") });
         }
-        return Err(String::from("error occurred when exec whoami"));
+        return Err(format!("error occurred when exec whoami, {}", error));
     }
 }
